@@ -47,6 +47,22 @@ $d-grande: 60px;
     color: $cor;
 }
 
+// Botão do site
+@mixin btn {
+    padding: 12px $d-pequena 10px;
+    font-family: $titulo;
+    font-size: em(18);
+    text-transform: uppercase;
+    color: $secundaria;
+    border: 3px solid;
+    display: inline-block;
+    transition: 0.4s;
+
+    &:hover {
+        color: #D46155;
+    }
+}
+
 // Converter valores para em
 @function em($pixel, $padrao_navegador: 16)
 {

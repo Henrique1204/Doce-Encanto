@@ -41,7 +41,27 @@
             padding: 15px 10px;
             font-family: $titulo;
             font-size: em(18);
-            display: block;
+
+            span {
+                display: block;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    width: 0px;
+                    height: 3px;
+                    margin-top: 2px;
+                    background-color: transparent;
+                    display: block;
+                    position: absolute;
+                    transition: 0.4s all ease;
+                }
+
+                &:hover::after {
+                    width: 100%;
+                    background-color: currentColor;
+                }
+            }
         }
         
         @include responsividade() {
@@ -144,13 +164,7 @@
         }
         
         a {
-            padding: 12px $d-pequena 10px;
-            font-family: $titulo;
-            font-size: em(18);
-            text-transform: uppercase;
-            color: $primaria;
-            border: 3px solid;
-            display: inline-block;
+            @include btn;
         }
     }
 
