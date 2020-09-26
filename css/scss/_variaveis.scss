@@ -1,0 +1,25 @@
+// Cores
+$primaria: #F4837D;
+$secundaria: #FF9C99;
+$branco-1: #F8F8F8;
+$branco-2: #F4F4F4;
+$cinza-1: #859A9E;
+$cinza-2: #A6BDBD;
+
+// Distâncias
+$d-pequena: 20px;
+$d-media: 40px;
+$d-grande: 60px;
+
+// Mixin sombra
+@mixin sombra($sombra...) {
+    -webkit-box-shadow: $sombra;
+    -moz-box-shadow: $sombra;
+    box-shadow: $sombra;
+}
+
+// Converter valores para em
+@function em($pixel, $padrao_navegador: 16)
+{
+    @return ($pixel / $padrao_navegador) * 1em;
+}

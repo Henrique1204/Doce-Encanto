@@ -1,0 +1,24 @@
+{
+  "name": "doce-encanto",
+  "version": "1.0.0",
+  "description": "Projeto pessoal para um site institucional de bebês reborn",
+  "main": "index.js",
+  "dependencies": {
+    "gulp-sass": "^4.1.0",
+    "gulp": "^4.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Henrique1204/Doce-Encanto.git"
+  },
+  "author": "Paulo Henrique silva SOuza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Henrique1204/Doce-Encanto/issues"
+  },
+  "homepage": "https://github.com/Henrique1204/Doce-Encanto#readme"
+}
