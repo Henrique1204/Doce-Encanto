@@ -1,0 +1,51 @@
+// Home
+.header {
+    padding: $d-pequena;
+    color: $branco-1;
+    background-color: $primaria;
+}
+
+.header h1 {
+    font-family: $titulo;
+    font-size: em(24);
+    font-weight: bold;
+    text-transform: capitalize;
+
+    @include grid(6);
+
+    @include responsividade() {
+        text-align: center;
+
+        &::after {
+            content: "";
+            width: 100px;
+            height: 3px;
+            margin: 10px auto 0;
+            background-color: currentColor;
+            display: block;
+        }
+    }
+}
+
+.header nav {
+    @include grid(6);
+
+    ul {
+        justify-content: flex-end;
+    
+        li + li {
+            margin-left: 20px;
+        }
+    
+        a {
+            padding: 15px 10px;
+            font-family: $titulo;
+            font-size: em(18);
+            display: block;
+        }
+
+        @include responsividade() {
+            justify-content: center;
+        }
+    }
+}
