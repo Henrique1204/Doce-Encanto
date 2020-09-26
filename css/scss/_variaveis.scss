@@ -22,6 +22,31 @@ $d-grande: 60px;
     box-shadow: $sombra;
 }
 
+// Mixin titulo de sessão
+@mixin titulo-sessao($cor: $primaria) {
+    margin: 0 auto;
+    text-align: center;
+    color: $cor;
+
+    &::after, &::before {
+        content: "";
+        width: 40px;
+        height: 3px;
+        margin: 0 10px 7px 10px;
+        background-color: currentColor;
+        display: inline-block;
+    }
+}
+
+@mixin  subtitulo-sessao($cor: $cinza-1) {
+    max-width: 300px;
+    margin: $d-pequena auto $d-media;
+    font-family: $corpo-texto;
+    font-size: em(18);
+    text-align: center;
+    color: $cor;
+}
+
 // Converter valores para em
 @function em($pixel, $padrao_navegador: 16)
 {
