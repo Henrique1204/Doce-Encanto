@@ -75,6 +75,7 @@
     }
 }
 
+// Portfólio
 .portfolio-home {
     padding: $d-grande 0;
     
@@ -186,6 +187,69 @@
             .card-info {
                 width: 100%;
             }
+        }
+    }
+}
+
+// Qualidades
+.qualidades {
+    padding: $d-grande 0;
+    background-color: $secundaria;
+
+    h1 {
+        @include titulo-sessao($branco-1);
+    }
+
+    ul {
+        margin-top: $d-media;
+    }
+
+    li {
+        margin-top: 20px;
+        text-align: center;
+        color: $branco-2;
+        @include grid(4);
+
+        .icon-container {
+            width: 140px;
+            height: 140px;
+            padding: 10px;
+            border-radius: 50%;
+            margin: 0 auto;
+            background-color: $primaria;
+            overflow: hidden;
+        }
+
+        h2 {
+            margin-top: $d-pequena;
+            font-family: $titulo;
+            font-size: em(20);
+            font-weight: bold;
+        }
+
+        p {
+            max-width: 260px;
+            margin: $d-pequena auto 0;
+            font-family: $corpo-texto;
+            font-size: em(16);
+            line-height: 1.4em;
+        }
+
+        @include responsividade(media) {
+            .icon-container {
+                width: 100px;
+                height: 100px;
+            }
+    
+            p {
+                font-size: em(14);
+            }
+        }
+    }
+
+    @include responsividade() {
+        li + li {
+            margin-top: $d-media;
         }
     }
 }
