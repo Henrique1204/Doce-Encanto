@@ -83,13 +83,14 @@
         font-size: em(28);
         font-weight: bold;
         text-align: center;
-        color: $branco-1;        
+        color: $branco-1;
     }
     
     @include responsividade(media) {
         padding: 90px 0;
         
         h1 {
+            max-width: 300px;
             font-size: em(20);
         }
     }
@@ -264,6 +265,45 @@
     @include responsividade() {
         li + li {
             margin-top: $d-media;
+        }
+    }
+}
+
+// Quem Sou
+.quem-sou {
+    padding: $d-grande 0;
+
+    h1 {
+        @include titulo-sessao($primaria);
+    }
+
+    & > p {
+        @include subtitulo-sessao($cinza-1);
+    }
+
+    .container {
+        margin-top: $d-grande;
+    }
+
+    .img-container {
+        height: 430px;
+        border-radius: 5px;
+        background-color: #000;
+        @include sombra(4px 4px 8px rgba(0, 0, 0, 0.25));
+
+        @include grid(6);
+    }
+
+    .historia {
+        font-family: $corpo-texto;
+        font-size: em(16);
+        line-height: 1.4em;
+        color: $cinza-1;
+
+        @include grid(5);
+
+        p {
+            margin-top: $d-pequena;
         }
     }
 }
