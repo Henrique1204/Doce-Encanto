@@ -142,6 +142,17 @@
                 }
             }
         }
+
+        button {
+            @include btn;
+            color: $primaria;
+            background-color: rgba(248, 248, 248, 0.5);
+            cursor: pointer;
+
+            @include responsividade() {
+                width: 100%;
+            }
+        }
     }
 
     .redes-sociais {
