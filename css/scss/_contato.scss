@@ -59,7 +59,7 @@
                 height: 12px;
                 top: 15px;
                 right: 20px;
-                background: url("../../img/icones/setinha.svg") no-repeat center;
+                background: url("../img/icones/setinha.svg") no-repeat center;
                 background-size: cover;
                 display: inline-block;
                 position: absolute;
@@ -93,4 +93,100 @@
             }
         }
     }    
+}
+
+// Contato
+.contato  {
+    padding: $d-grande 0;
+    background-color: $secundaria;
+
+    h1 {
+        @include titulo-sessao($branco-1);
+    }
+
+    .container {
+        margin-top: $d-media;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    form {
+        @include grid(6);
+
+        .campo {
+            margin-bottom: $d-pequena;
+
+            label {
+                margin-bottom: 5px;
+                font-family: $corpo-texto;
+                font-size: em(18);
+                color: $branco-1;
+                display: block;
+            }
+
+            input, textarea {
+                width: 100%;
+                padding: 10px;
+                border: 2px solid $primaria;
+                border-radius: 5px;
+                font-family: $corpo-texto;
+                font-size: em(16);
+                letter-spacing: 0.1em;
+                color: #222;
+                background-color: rgba(248, 248, 248, 0.5);
+                outline: none;
+                transition: 0.2s;
+
+                &:focus {
+                    border-color: $branco-1;
+                }
+            }
+        }
+    }
+
+    .redes-sociais {
+        @include grid(4);
+
+        h2 {
+            font-family: $titulo;
+            font-size: em(18);
+            font-weight: bold;
+            text-align: center;
+            color: $branco-1;
+
+            &::after {
+                content: "";
+                width: 100px;
+                height: 3px;
+                margin: 2px auto  $d-pequena;
+                background-color: currentColor;
+                display: block;
+            }
+        }
+
+        .linha {
+            justify-content: center;
+        }
+
+        li + li {
+            margin-left: 20px;
+        }
+
+        a {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: $primaria;
+            overflow: hidden;
+            display: block;
+
+            &.facebook {
+                padding: 5px;
+            }
+        }
+
+        @include responsividade() {
+            display: none;
+        } 
+    }
 }
