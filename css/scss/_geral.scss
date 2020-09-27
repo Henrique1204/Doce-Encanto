@@ -20,3 +20,155 @@ img {
     width: 100%;
     display: block;
 }
+
+// Header
+.header {
+    padding: $d-pequena;
+    color: $branco-1;
+    background-color: $primaria;
+    
+    h1 {
+        @include grid(6);
+        
+        @include responsividade() {
+            text-align: center;
+            
+            &::after {
+                content: "";
+                width: 100px;
+                height: 2px;
+                margin: 10px auto 0;
+                background-color: currentColor;
+                display: block;
+            }
+        }
+    }
+
+    nav {
+        @include grid(6);
+    }
+}
+
+.logo {
+    font-family: $titulo;
+    font-size: em(24);
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.menu-nav {
+    ul {
+        justify-content: flex-end;
+        
+        li + li {
+            margin-left: $d-pequena;
+        }
+        
+        a {
+            padding: 15px 10px;
+            font-family: $titulo;
+            font-size: em(18);
+            
+            span {
+                display: block;
+                position: relative;
+            }
+
+            span::after {
+                content: "";
+                width: 0px;
+                height: 3px;
+                margin-top: 2px;
+                background-color: transparent;
+                display: block;
+                position: absolute;
+                transition: 0.4s all ease;
+            }
+            
+            span:hover::after, &.ativo span::after {
+                width: 100%;
+                background-color: currentColor;
+            }
+        }
+        
+        @include responsividade() {
+            justify-content: center;
+        }
+    }
+}
+
+// Footer
+.footer {
+    color: $branco-1;
+    background-color: $primaria;
+
+    @include sombra(0px -4px 8px rgba(0, 0, 0, 0.25));
+
+    .infos {
+        padding: $d-pequena;
+    }
+
+    h1 {
+        @include grid(4);
+    }
+
+    .redes-sociais {
+        justify-content: center;
+
+        @include grid(4);
+
+        li + li {
+            margin-left: 20px;
+        }
+
+        a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: $secundaria;
+            overflow: hidden;
+            display: block;
+
+            &.facebook {
+                padding: 5px;
+            }
+        }
+    }
+
+    nav {
+        @include grid(4);
+    }
+
+    @include responsividade(media) {
+        h1 {
+            text-align: center;
+            @include grid(12);
+        }
+
+        .redes-sociais {
+            order: 2;
+            @include grid(12);
+        }
+
+        nav {
+            margin: $d-pequena 0;
+            @include grid(12);
+
+            ul {
+                justify-content: center;
+            }
+        }
+    }
+
+    .copy {
+        padding: 10px $d-pequena;
+        font-family: $corpo-texto;
+        font-size: em(18);
+        text-align: center;
+        background-color: #222;
+
+        @include responsividade() {
+            font-size: em(16);
+        }
+    }
+}
