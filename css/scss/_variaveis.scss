@@ -25,6 +25,9 @@ $d-grande: 60px;
 // Mixin titulo de sessão
 @mixin titulo-sessao($cor: $primaria) {
     margin: 0 auto;
+    font-family: $titulo;
+    font-size: em(28);
+    font-weight: bold;
     text-align: center;
     color: $cor;
 

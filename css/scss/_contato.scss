@@ -21,3 +21,76 @@
         }
     }
 }
+
+.faq {
+    padding: $d-grande 0;
+
+    h1 {
+        @include titulo-sessao();
+    }
+
+    p {
+        @include subtitulo-sessao();
+        margin-bottom: $d-pequena;
+    }
+
+    .faq-lista {
+        justify-content: center;
+
+        dt, dd {
+            @include grid(7);
+        }
+
+        dt {
+            padding: 10px;
+            border-radius: 5px;
+            font-family: $titulo;
+            font-size: em(16);
+            letter-spacing: 0.1em;
+            color: $primaria;
+            background-color: $branco-1;
+            position: relative;
+            cursor: pointer;
+            @include sombra(4px 4px 8px rgba(0, 0, 0, 0.25));
+
+            &::after {
+                content: "";
+                width: 20px;
+                height: 12px;
+                top: 15px;
+                right: 20px;
+                background: url("../../img/icones/setinha.svg") no-repeat center;
+                background-size: cover;
+                display: inline-block;
+                position: absolute;
+                transition: .04s ease;
+            }
+
+            &.ativo::after {
+                transform: rotate(180deg);
+            }
+        }
+
+        dt {
+            margin-top: $d-pequena;
+        }
+
+        dd {
+            max-height: 0px;
+            padding: 0;
+            font-family: $corpo-texto;
+            font-size: (16em);
+            line-height: 1.4em;
+            color: $cinza-1;
+            font-size: em(16);
+            overflow: hidden;
+            animation: encolher 0.5s forwards;
+
+            &.ativo {
+                max-height: 500px;
+                padding: 10px;
+                animation: crescer 0.5s forwards;
+            }
+        }
+    }    
+}
