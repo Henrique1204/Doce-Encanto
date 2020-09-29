@@ -157,7 +157,7 @@
         .icon-container {
             width: 140px;
             height: 140px;
-            padding: 10px;
+            padding: 25px;
             border-radius: 50%;
             margin: 0 auto;
             background-color: $primaria;
@@ -169,6 +169,7 @@
             font-family: $titulo;
             font-size: em(20);
             font-weight: bold;
+            text-transform: uppercase;
         }
         
         p {
