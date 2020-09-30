@@ -5,6 +5,7 @@ $branco-1: #F8F8F8;
 $branco-2: #F4F4F4;
 $cinza-1: #859A9E;
 $cinza-2: #A6BDBD;
+$hover: #D46155;
 
 // Fontes
 $titulo: 'Merriweather Sans', sans-serif;
@@ -62,7 +63,7 @@ $d-grande: 60px;
     transition: 0.4s;
 
     &:hover {
-        color: #D46155;
+        color: $hover;
     }
 }
 

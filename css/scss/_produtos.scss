@@ -1,0 +1,56 @@
+@import "_slide";
+
+// Galeria
+.galeria {
+    padding: $d-grande 0;
+    margin-top: 40px;
+    background-color: $secundaria;
+
+    h1 {
+        @include titulo-sessao($branco-1);
+    }
+
+    & > p {
+        @include subtitulo-sessao($branco-2);
+    }
+
+    .fotos {
+        display: grid;
+        grid-template-areas: "foto-1 foto-1" "foto-2 foto-3" "titulo titulo";
+        gap: 20px;
+
+        .f1 {
+            height: 200px;
+            grid-area: foto-1;
+            background-color: #000;
+        }
+
+        .f2 {
+            height: 200px;
+            grid-area: foto-2;
+            background-color: #000;
+        }
+
+        .f3 {
+            height: 200px;
+            grid-area: foto-3;
+            background-color: #000;
+        }
+
+        h2 {
+            font-family: $titulo;
+            font-size: em(20);
+            text-align: center;
+            color: $branco-1;
+            grid-area: titulo;
+        }
+
+        @include responsividade() {
+            grid-template-areas: "titulo" "foto-1" "foto-2" "foto-3";
+
+            h2 {
+                margin-top: $d-pequena;
+            }
+        }
+    }
+}
