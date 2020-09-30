@@ -54,3 +54,44 @@
         }
     }
 }
+
+// Orçamento
+.orcamento {
+    padding: $d-grande 0;
+    @include forms($secundaria);
+
+    .container {
+        margin-top: $d-media;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    h1 {
+        @include titulo-sessao;
+        margin-bottom: $d-grande;
+    }
+
+    p {
+        @include grid(4);
+
+        font-family: $corpo-texto;
+        font-size: em(16);
+        line-height: 1.4em;
+        color: $cinza-1;
+
+        a {
+            color: $secundaria;
+            text-decoration: underline;
+            transition: 0.3s;
+
+            &:hover {
+                color: $hover;
+            }
+        }
+
+        @include responsividade() {
+            margin-top: $d-media;
+            text-align: center;
+        }
+    }
+}

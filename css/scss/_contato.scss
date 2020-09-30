@@ -75,6 +75,7 @@
 .contato  {
     padding: $d-grande 0;
     background-color: $secundaria;
+    @include forms($branco-1);
 
     h1 {
         @include titulo-sessao($branco-1);
@@ -84,51 +85,6 @@
         margin-top: $d-media;
         justify-content: space-around;
         align-items: flex-start;
-    }
-
-    form {
-        @include grid(6);
-
-        .campo {
-            margin-bottom: $d-pequena;
-
-            label {
-                margin-bottom: 5px;
-                font-family: $corpo-texto;
-                font-size: em(18);
-                color: $branco-1;
-                display: block;
-            }
-
-            input, textarea {
-                width: 100%;
-                padding: 10px;
-                border: 2px solid $primaria;
-                border-radius: 5px;
-                font-family: $corpo-texto;
-                font-size: em(16);
-                letter-spacing: 0.1em;
-                color: #222;
-                background-color: rgba(248, 248, 248, 0.5);
-                outline: none;
-                transition: 0.2s;
-
-                &:focus {
-                    border-color: $branco-1;
-                }
-            }
-        }
-
-        button {
-            @include btn;
-            color: $primaria;
-            background-color: rgba(248, 248, 248, 0.5);
-            cursor: pointer;
-
-            @include responsividade() {
-                width: 100%;
-            }
-        }
     }
 
     .redes-sociais {
