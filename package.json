@@ -4,10 +4,9 @@
   "description": "Projeto pessoal para um site institucional de bebês reborn",
   "main": "index.js",
   "dependencies": {
-    "gulp-sass": "^4.1.0",
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

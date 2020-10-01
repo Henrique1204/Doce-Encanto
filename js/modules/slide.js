@@ -141,12 +141,12 @@ class Slide {
     }
 
     iniciar() {
-        this.configurarSlides();
-        this.bindMetodos();
-        this.trasnsitar(true);
-        this.addEventoResize();
-
         if (this.slide && this.slideWrapper) {
+            this.configurarSlides();
+            this.bindMetodos();
+            this.trasnsitar(true);
+            this.addEventoResize();
+
             this.addEventosSlide();
             this.mudarSlide();
         }
@@ -202,11 +202,13 @@ export default class SlideNav extends Slide {
     }
 
     addEventoControle(controlePersonalizado) {
-        this.controle = document.querySelector(controlePersonalizado) || this.criarControle();
-        this.controleArray = [...this.controle.children];
-
-        this.ativarControleItem();
-        this.controleArray.forEach(this.eventoControle);
+        if (this.slide && this.slideWrapper) {
+            this.controle = document.querySelector(controlePersonalizado) || this.criarControle();
+            this.controleArray = [...this.controle.children];
+    
+            this.ativarControleItem();
+            this.controleArray.forEach(this.eventoControle);
+        }
     }
 
     bindEventosControle() {
