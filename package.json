@@ -4,11 +4,13 @@
   "description": "Projeto pessoal para um site institucional de bebês reborn",
   "main": "index.js",
   "dependencies": {
+    "@babel/polyfill": "^7.11.5",
     "gulp": "^4.0.2",
     "gulp-sass": "^4.1.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development --watch"
   },
   "repository": {
     "type": "git",
@@ -19,5 +21,12 @@
   "bugs": {
     "url": "https://github.com/Henrique1204/Doce-Encanto/issues"
   },
-  "homepage": "https://github.com/Henrique1204/Doce-Encanto#readme"
+  "homepage": "https://github.com/Henrique1204/Doce-Encanto#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  }
 }
